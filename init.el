@@ -7,6 +7,7 @@
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
 ;; (require 'init-compat)
+(setq inhibit-startup-message t)        ; Disable startup message 
 (require 'init-utils)
 
 ;; Needed for Emacs version < 24. must come before elpa, as it may provide package.el
@@ -16,7 +17,7 @@
 ;; explicitly call 'package-initialize to set up all packages installed via ELPA.
 ;; should come before all package-related config files
 (require 'init-elpa)
-;; (require 'init-exec-path) ;; Set up $PATH
+(require 'init-exec-path) ;; Set up $PATH
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
@@ -51,7 +52,7 @@
 (require 'init-tabbar)
 (require 'init-editing-utils)
 (require 'init-evil)
-(require 'init-matlab)
+;;(require 'init-matlab)
 
 ;; (require 'init-vc)
 ;; (require 'init-darcs)
@@ -70,8 +71,8 @@
 ;; (require 'init-html)
 ;; (require 'init-css)
 ;; (require 'init-haml)
-;; (require 'init-python-mode)
-(require 'init-haskell)
+(require 'init-python-mode)
+;; (require 'init-haskell)
 ;; (require 'init-ruby-mode)
 ;; (require 'init-rails)
 ;; (require 'init-sql)
@@ -151,8 +152,11 @@
  '(custom-enabled-themes (quote (atom-dark)))
  '(custom-safe-themes
    (quote
-    ("90d329edc17c6f4e43dbc67709067ccd6c0a3caa355f305de2041755986548f2" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+    ("a1289424bbc0e9f9877aa2c9a03c7dfd2835ea51d8781a0bf9e2415101f70a7e" "90d329edc17c6f4e43dbc67709067ccd6c0a3caa355f305de2041755986548f2" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(fci-rule-color "#073642")
+ '(org-agenda-files
+   (quote
+    ("~/Documents/org/computer.org" "~/Documents/org/work.org" "~/Documents/org/english.org")))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
